@@ -1,0 +1,16 @@
+!!!
+%html{ lang: 'ru' }
+  %head
+    %title= (@page_title || '&laquo;Оборудование для киосков&raquo;'.html_safe)
+    = favicon_link_tag 'favicon.ico'
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = render 'shim'
+
+  %body{ class: "#{controller.controller_name}" }
+    .container-fluid
+
+      = render 'header'
+
+      = yield

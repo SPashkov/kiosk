@@ -1,0 +1,2 @@
+$('#search_results').html("#{ j(render partial: 'search_results', collection: @search_results) }");
+$('form#form_search :input').not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');

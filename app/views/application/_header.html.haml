@@ -1,0 +1,8 @@
+.row
+  .col-md-12
+    %h3.text-center Оборудование для киосков
+    = form_tag index_path, method: :get, id: 'form_search', class: 'form-search', role: 'form', remote: true do
+      .col-sm-6.col-sm-offset-2
+        = search_field_tag :search, nil, placeholder: 'Наименование товара...', autofocus: true, class: 'form-control search-query'
+      .col-sm-4
+        = button_tag 'Найти', name: nil, class: 'btn btn-default'
